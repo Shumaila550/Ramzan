@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramazan Mubarak</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(#020024,#090979,#000);
+    color:white;
+    font-family:Segoe UI, sans-serif;
+    overflow:hidden;
+}
+
+/* Moon */
+.moon{
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:#f5f3ce;
+    border-radius:50%;
+    box-shadow:0 0 40px #fff;
+    top:15%;
+    right:20%;
+    animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-20px)}
+}
+
+/* Text animation */
+.message{
+    text-align:center;
+    animation:fade 4s ease-in-out forwards;
+}
+
+h1{
+    font-size:3rem;
+    margin:0;
+}
+
+p{
+    font-size:1.3rem;
+    opacity:.9;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(40px)}
+    to{opacity:1; transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="message">
+    <h1>🌙 Ramazan Mubarak</h1>
+    <p>May this holy month bring peace, blessings and happiness to you.</p>
+</div>
+
+<!-- Sound -->
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b1c7b.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
